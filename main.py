@@ -43,3 +43,9 @@ class Eu:
 
 with open("EUcsatlakozas.txt","r",encoding="latin2") as f:
   lista = [Eu(sor) for sor in f]
+
+#3
+  
+print(f"3.feladat: Eu tagállamainak száma: {len(lista)} db")
+
+#4
