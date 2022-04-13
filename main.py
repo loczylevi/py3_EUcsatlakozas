@@ -30,3 +30,16 @@ Továbbá olvassa be az UTF-8 kódolású EUcsatlakozas.txt állományban sorait
 
 """
 
+#Ausztria;1995.01.01
+#1-2
+class Eu:
+  def __init__(self,sor):
+    sor = sor.strip().split(";")
+    self.orszag = sor[0]
+    self.ev = int(sor[1][:4])
+    self.honap = sor[1][5:7]
+    self.nap = int(sor[1][8:10])
+    self.datum = sor[1]
+
+with open("EUcsatlakozas.txt","r",encoding="latin2") as f:
+  lista = [Eu(sor) for sor in f]
